@@ -3,8 +3,12 @@ amira-hephzibah-final.backup.html
 amira-hephzibah-final.html
 
 # Loose source videos in the project root are ignored,
-# but the friend videos served by the site (videos/) are tracked.
+# but the video served by the site (videos/*.mp4) is tracked.
 *.mp4
 !videos/*.mp4
+
+# Source camera files (HEVC/huge) — only the transcoded web mp4 is committed
+*.mov
+*.MOV
 
 .vercel
