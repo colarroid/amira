@@ -313,7 +313,7 @@ body.deck-on nav,body.deck-on footer{display:none;}
 #deck > #hero{justify-content:flex-start!important;}
 
 /* ── TOP BAR (progress + chapters) ── */
-#deck-top{position:absolute;top:0;left:0;right:0;z-index:140;
+#deck-top{position:absolute;top:0;left:0;right:0;z-index:140;max-width:560px;margin-left:auto;margin-right:auto;
   display:flex;align-items:center;gap:10px;padding:12px 14px;pointer-events:none;}
 #deck-top>*{pointer-events:auto;}
 .deck-iconbtn{width:40px;height:40px;flex-shrink:0;border:none;border-radius:50%;
@@ -331,7 +331,7 @@ body.deck-on nav,body.deck-on footer{display:none;}
   padding:5px 11px;border-radius:20px;box-shadow:0 3px 12px rgba(201,123,123,.18);white-space:nowrap;}
 
 /* ── BOTTOM NAV ── */
-#deck-nav{position:absolute;left:0;right:0;bottom:0;z-index:140;
+#deck-nav{position:absolute;left:0;right:0;bottom:0;z-index:140;max-width:560px;margin-left:auto;margin-right:auto;
   display:flex;align-items:stretch;gap:10px;
   padding:12px 14px calc(14px + env(safe-area-inset-bottom));
   background:linear-gradient(to top,rgba(0,0,0,.04),transparent);}
