@@ -376,15 +376,8 @@ body.deck-on nav,body.deck-on footer{display:none;}
 .di-num{font-size:.58rem;letter-spacing:.18em;color:rgba(255,255,255,.4);text-transform:uppercase;}
 .di-title{font-family:'Playfair Display',serif;font-size:.9rem;color:#fff;margin-top:3px;line-height:1.25;}
 
-/* ── DESKTOP: phone-frame keepsake ── */
-@media(min-width:760px){
-  html,body{height:100%;}
-  body.deck-on{display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 50% 18%,#3a1c33,#160812);}
-  #deck{position:relative;inset:auto;width:430px;height:92vh;max-height:900px;
-    border-radius:34px;
-    box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 0 11px #0c0610,0 0 0 13px rgba(212,165,116,.22);}
-}
+/* Deck is full-bleed at every screen size (no tablet/desktop frame). */
+/* (full-bleed on all sizes — desktop phone-frame removed) */
 /* Final-slide brand link — make it read unmistakably as a tappable button */
 .cta-tap{font-size:1.8rem;line-height:1;margin-bottom:4px;animation:ctaTap 1.3s ease-in-out infinite;}
 @keyframes ctaTap{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
