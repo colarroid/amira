@@ -1,0 +1,8 @@
+# Backups / duplicates (index.html is the deployed file)
+amira-hephzibah-final.backup.html
+amira-hephzibah-final.html
+
+# Source media — not needed by the site (video is embedded in index.html)
+*.mp4
+
+.vercel
