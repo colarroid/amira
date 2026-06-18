@@ -306,6 +306,11 @@ body.deck-on nav,body.deck-on footer{display:none;}
 }
 .card-chapter.active{opacity:1;visibility:visible;transform:none;z-index:2;}
 #deck section{min-height:100%;padding-bottom:140px!important;}
+/* #hero & #strength have their own #id position/overflow rules that outrank
+   .card-chapter; re-assert the deck layout so every slide clamps to the frame
+   and scrolls internally. Anchor hero content to top (flex-center clips when tall). */
+#deck > section.card-chapter{position:absolute!important;inset:0!important;overflow-x:hidden!important;overflow-y:auto!important;}
+#deck > #hero{justify-content:flex-start!important;}
 
 /* ── TOP BAR (progress + chapters) ── */
 #deck-top{position:absolute;top:0;left:0;right:0;z-index:140;
