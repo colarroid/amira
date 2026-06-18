@@ -385,6 +385,27 @@ body.deck-on nav,body.deck-on footer{display:none;}
     border-radius:34px;
     box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 0 11px #0c0610,0 0 0 13px rgba(212,165,116,.22);}
 }
+/* Final-slide brand link — make it read unmistakably as a tappable button */
+.cta-tap{font-size:1.8rem;line-height:1;margin-bottom:4px;animation:ctaTap 1.3s ease-in-out infinite;}
+@keyframes ctaTap{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+.cta-brand{display:flex;align-items:center;justify-content:center;gap:10px;
+  width:min(440px,92%);margin:6px auto 0;padding:22px 28px;border-radius:50px;
+  background:linear-gradient(135deg,var(--rose-deep),var(--purple));color:#fff;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:1.18rem;letter-spacing:0.03em;
+  text-decoration:none;cursor:pointer;border:2px solid rgba(255,255,255,0.7);
+  box-shadow:0 12px 30px rgba(155,110,168,0.45),inset 0 1px 0 rgba(255,255,255,0.3);
+  animation:ctaPulse 2s ease-in-out infinite;transition:transform 0.15s ease;
+  -webkit-tap-highlight-color:transparent;}
+.cta-brand:hover{transform:translateY(-3px);}
+.cta-brand:active{transform:translateY(2px) scale(0.985);}
+.cta-arrow{font-size:1.35rem;animation:ctaNudge 1.3s ease-in-out infinite;}
+@keyframes ctaPulse{
+  0%,100%{box-shadow:0 12px 30px rgba(155,110,168,0.45),0 0 0 0 rgba(201,123,123,0.5),inset 0 1px 0 rgba(255,255,255,0.3);}
+  50%{box-shadow:0 14px 34px rgba(155,110,168,0.5),0 0 0 16px rgba(201,123,123,0),inset 0 1px 0 rgba(255,255,255,0.3);}}
+@keyframes ctaNudge{0%,100%{transform:translateX(0);}50%{transform:translateX(6px);}}
+.cta-hint{display:inline-flex;align-items:center;gap:6px;margin-top:16px;
+  font-family:'Lato',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--rose-deep);}
 </style>
 </head>
 <body>
@@ -1006,12 +1027,12 @@ body.deck-on nav,body.deck-on footer{display:none;}
       <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.85;color:var(--text-light);margin-bottom:12px;">That dream you carry — of helping women feel radiant, worthy, and seen through the power of skincare — it is not just a dream. It is a calling. And it already has a face.</p>
       <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.85;color:var(--text-light);margin-bottom:36px;">This is what it could look like. A brand as beautiful as the woman behind it. Click and see what God has already been preparing a space for — your very own world. 👇</p>
 
-      <a href="https://yummy-channels-021656.framer.app" target="_blank"
-        style="display:inline-block;background:linear-gradient(135deg,var(--rose-deep),var(--purple));color:white;font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;padding:20px 44px;text-decoration:none;border-radius:3px;box-shadow:0 8px 32px rgba(201,123,123,0.35);transition:transform 0.2s,box-shadow 0.2s;letter-spacing:0.05em;"
-        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 40px rgba(201,123,123,0.45)'"
-        onmouseout="this.style.transform='';this.style.boxShadow='0 8px 32px rgba(201,123,123,0.35)'">
-        ✨ Step Into Your Brand — See It Now
+      <div class="cta-tap">👇</div>
+      <a href="https://yummy-channels-021656.framer.app" target="_blank" class="cta-brand" aria-label="Open your skincare brand website">
+        <span>✨ Open Your Brand</span>
+        <span class="cta-arrow">→</span>
       </a>
+      <div class="cta-hint">🔗 Tap the button to open your live website</div>
 
       <p style="margin-top:24px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--rose-gold);">This is just the beginning, Amira. 🌹👑</p>
     </div>
